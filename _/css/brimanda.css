@@ -1,0 +1,208 @@
+/* Briamanda http://brimanda.com Copyright 2014 Brian & Amanda */
+/* Custom Fonts */
+@font-face { font-family: 'BrimandaHeadline'; src: url("../fonts/BrimandaHeadline.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BrimandaHeadline.eot?#iefix") format("embedded-opentype"), url("../fonts/BrimandaHeadline.woff") format("woff"), url("../fonts/BrimandaHeadline.ttf") format("truetype"), url("../fonts/BrimandaHeadline.svg#5d953236d048b1c97ff578f24e471104") format("svg");
+  /* Legacy iOS */
+  font-style: normal; font-weight: 200; }
+@font-face { font-family: 'BrimandaSubhead'; src: url("../fonts/BrimandaSubhead.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BrimandaSubhead.eot?#iefix") format("embedded-opentype"), url("../fonts/BrimandaSubhead.woff") format("woff"), url("../fonts/BrimandaSubhead.ttf") format("truetype"), url("../fonts/BrimandaSubhead.svg#1ef04d13a00443a18a42399f23fa06fe") format("svg");
+  /* Legacy iOS */
+  font-style: normal; font-weight: 400; }
+@font-face { font-family: 'BrimandaBody'; src: url("../fonts/BrimandaBody.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/BrimandaBody.eot?#iefix") format("embedded-opentype"), url("../fonts/BrimandaBody.woff") format("woff"), url("../fonts/BrimandaBody.ttf") format("truetype"), url("../fonts/BrimandaBody.svg#d67becf5de89115118c397ed4bae7ff0") format("svg");
+  /* Legacy iOS */
+  font-style: normal; font-weight: 400; }
+/* Reset Styles
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video, details, summary { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+/* reset the default cursor */
+html, body { cursor: default; }
+
+code { cursor: text; }
+
+a, label, button, input[type=button], input[type="radio"], input[type="submit"], input[type="checkbox"], .clickable { cursor: pointer; }
+
+button[disabled], input[disabled] { cursor: default; }
+
+article, aside, figure, footer, header, hgroup, nav, section, details, summary { display: block; }
+
+/* Responsive images and other embedded objects */
+img, object, embed { max-width: 100%; }
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html { overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+a { margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+
+del { text-decoration: line-through; }
+
+abbr[title], dfn[title] { border-bottom: 1px dotted #000; cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table { border-collapse: collapse; border-spacing: 0; }
+
+th { font-weight: bold; vertical-align: bottom; }
+
+td { font-weight: normal; vertical-align: top; }
+
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+
+input, select { vertical-align: middle; }
+
+pre { white-space: pre; /* CSS2 */ white-space: pre-wrap; /* CSS 2.1 */ white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */ word-wrap: break-word; /* IE */ }
+
+input[type="radio"] { vertical-align: text-bottom; }
+
+input[type="checkbox"] { vertical-align: bottom; }
+
+.ie7 input[type="checkbox"] { vertical-align: baseline; }
+
+.ie6 input { vertical-align: text-bottom; }
+
+select, input, textarea { font: 99% sans-serif; }
+
+table { font-size: inherit; font: 100%; }
+
+small { font-size: 85%; }
+
+strong { font-weight: bold; }
+
+td, td img { vertical-align: top; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; }
+
+sup { top: -0.5em; }
+
+sub { bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea { margin: 0; }
+
+/* make buttons play nice in IE */
+button { width: auto; overflow: visible; }
+
+/* scale images in IE7 more attractively */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+/* prevent BG image flicker upon hover */
+.ie6 html { filter: expression(document.execCommand("BackgroundImageCache", false, true)); }
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+
+.clearfix:after { clear: both; }
+
+.clearfix { zoom: 1; }
+
+/* apply a natural box layout model to all elements */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.chromeframe { position: absolute; top: 0; }
+
+/* DOM Styles */
+body { -moz-background-size: cover; -webkit-background-size: cover; -o-background-size: cover; background-size: cover; background-color: #fff; height: 100%; width: 100%; color: #666; }
+
+input { margin: 0; padding: 10px; border: none; -webkit-font-smoothing: antialiased; -webkit-appearance: none; border-radius: 0; text-transform: uppercase; font-size: 1.5em; font-family: "BrimandaBody", Helvetica, Arial, sans-serif; }
+
+h1, h2, .h1, .h2 { font-family: "BrimandaHeadline", Impact, Arial, sans-serif; margin-bottom: 0.1em; font-weight: normal; text-transform: uppercase; }
+
+h3, h4, h5, .h3, .h4, .h5 { font-family: "BrimandaSubhead", Impact, Arial, sans-serif; margin-bottom: .5em; font-weight: normal; }
+
+h1 { font-size: 2.375em; }
+
+h2 { font-size: 1.8em; }
+
+h3 { font-size: 1.3em; color: #a7c9d2; }
+
+h4 { font-size: 1.2em; color: #9c82af; }
+
+p, ul, ol { font-family: "BrimandaBody", Helvetica, Arial, sans-serif; color: #534640; }
+
+p { font-size: 1em; margin-bottom: 10px; line-height: 1.3em; }
+
+a { color: #BF7C2B; text-decoration: none; }
+a:hover, a:focus, a.active { color: #BC2B26; }
+
+.wrapper { max-width: 960px; margin: 0 auto; padding: 30px; }
+
+#intro, #when, #where, #stay, #gifts, #contact, #more { margin-bottom: 2em; }
+
+#header h1 { text-align: center; }
+#header h3 { text-align: center; margin-bottom: 1em; color: #9c82af; }
+#header nav { border-bottom: solid #bb2c26 1px; text-align: center; background: #fff; }
+#header nav ul li { display: inline-block; text-transform: uppercase; }
+#header nav ul li a { color: #666; text-decoration: none; padding: 10px 15px; display: block; font-size: 1em; }
+#header nav ul li a:hover, #header nav ul li a:focus, #header nav ul li a.active { color: #A7C9D2; }
+
+#footer h3 { font-size: 2em; color: #32323A; }
+
+#intro h3 { text-align: center; }
+
+#slideshow { position: relative; padding-bottom: 1em; width: 100%; height: auto; }
+
+#when h2 { text-align: center; margin-bottom: 1em; }
+#when h2 span { font-size: 1.15em; }
+#when h2 img { display: block; margin: 20px auto; }
+#when h3, #when h4 { text-align: center; margin-bottom: 2em; }
+#when h4 span { display: block; }
+
+#where .sign img { height: auto; max-width: 100%; width: 40%; float: right; padding: 0 0 20px 20px; }
+#where .address { font-style: italic; color: #bb2c26; }
+#where .map { display: none; }
+#where ul { list-style: square; padding-left: 20px; }
+#where ul li { font-size: 1em; margin-bottom: 10px; line-height: 1.3em; }
+
+#stay ul li { margin-bottom: 1em; }
+
+#more ul li { margin-bottom: 20px; }
+#more ul li .video { max-width: 640px; }
+
+/* Media Queries
+-------------------------------------------------------------------------------*/
+/* Tablet Styles
+-------------------------------------------------------------------------------*/
+@media screen and (min-width: 640px) { /* Header Styles */
+  body { font-size: 1.75em; }
+  p { font-size: .65em; }
+  .scroll-top-fix:before { display: block; content: ""; height: 80px; margin: -80px 0 0; }
+  #header { padding-top: 2.5em; }
+  #header nav { position: fixed; left: 0; top: 0; width: 100%; z-index: 999; }
+  #header nav ul li a { padding: 20px 30px; font-size: .55em; }
+  #intro .p1, #intro .p2 { width: 50%; float: left; }
+  #intro .p1 p { padding-right: 20px; }
+  #intro .p2 p { padding-left: 20px; }
+  #when h2 { font-size: .9em; margin-bottom: 2em; }
+  #when h2 img { display: inline-block; vertical-align: middle; margin: 0 30px; }
+  #when h3 { max-width: 420px; margin-left: auto; margin-right: auto; }
+  #where .sign img { width: 20%; }
+  #where .address { margin-left: 20px; }
+  #where .map { display: block; }
+  #where ul li { font-size: .65em; }
+  #more ul li { width: 50%; float: left; margin-bottom: 0px; padding-bottom: 20px; }
+  #more ul li:nth-child(even) { padding-left: 10px; }
+  #more ul li:nth-child(odd) { padding-right: 10px; }
+  #more ul li .video { max-width: 640px; } }
+/* Carousel Overrides 
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+	background-color: #a7c9d2 !important;
+}
+.owl-theme .owl-controls .owl-page span {
+	background: #666 !important;
+}*/
